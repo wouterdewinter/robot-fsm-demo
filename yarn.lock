@@ -7688,6 +7688,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+robot3@^0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/robot3/-/robot3-0.2.9.tgz#81b0f0f8ea2afe1723577d622f0dec4e97415bf9"
+
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
