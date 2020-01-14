@@ -1,7 +1,7 @@
 import { useMachine } from 'react-robot';
 import React from 'react';
 import { createMachine, state, transition, action, reduce } from 'robot3';
-import { Modal, Button, Input } from 'semantic-ui-react'
+import { Container, Modal, Button, Input } from 'semantic-ui-react'
 
 const context = () => ({
   hours: 8,
@@ -39,7 +39,7 @@ export default function Form() {
   const state = current.name;
   const { hours, newHours } = current.context;
 
-  return (<>
+  return (<Container>
     <h1>State: {state}, Hours: {hours}</h1>
     <Button onClick={() => send('open')}>Open modal</Button>
       <Modal open={state !== 'closed'} onClose={() => send('close')} closeIcon>
@@ -59,7 +59,7 @@ export default function Form() {
           {state === 'incorrect' && <Button primary onClick={() => send('submit')}>Submit</Button>}
         </Modal.Actions>
       </Modal>
-    </>)
+    </Container>)
 }
 
 function approve(context) {
