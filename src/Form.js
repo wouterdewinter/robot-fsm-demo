@@ -45,8 +45,8 @@ export default function Form() {
       <Modal open={state !== 'closed'} onClose={() => send('close')} closeIcon>
         <Modal.Header>Check your hours</Modal.Header>
         <Modal.Content>
-          {state === 'start' && `You have worked ${hours} hours`}
-          {state === 'finished' && "Thank you"}
+          {state === 'start' && `Did you indeed work ${hours} hours?`}
+          {state === 'finished' && "Thank you, you will receive the invoice shortly"}
           {state === 'incorrect' && <>
             <p>How many did you work then?</p>
             <Input value={newHours} onChange={(e, data) => send({ type: 'input', value: data.value}) }/>
@@ -69,5 +69,5 @@ function approve(context) {
 
 function submit(context) {
   // perform side effects
-  console.log('submit changed hours ' + context.newHours);
+  console.log('submit hour change request ' + context.newHours);
 }
